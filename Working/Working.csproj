@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AWSProjectType>Lambda</AWSProjectType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- SonarQube needs this -->
+    <ProjectGuid>{3849742A-93BD-413F-BCD0-8B07E88CF678}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include=".lambda-test-tool\SavedRequests\Hello-World.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="amazon.lambda.core" Version="1.0.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.4.0" />
+    <PackageReference Include="Amazon.Lambda.SQSEvents" Version="1.0.0" />
+    <PackageReference Include="AWSSDK.Lambda" Version="3.3.19.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.Net.Http.WinHttpHandler" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.1.3" />
+  </ItemGroup>
+
+</Project>
